@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Login Github: {{data.login}}</h1>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar [ngStyle]="{'background-image': 'url(' + data.avatar_url + ')'}" class="example-header-image"></div>
+    <mat-card-title>{{data.name}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <p>Company: {{data.company}}</p>
+      <p>Followers: {{data.followers}}</p>
+      <p>Following: {{data.following}}</p>
+  </mat-card-content>
+</mat-card>
+<mat-nav-list role="list">
+    <mat-list-item *ngFor="let repo of data.repos">
+        <p matLine>{{ repo }}</p>
+    </mat-list-item>
+  </mat-nav-list>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClose()">OK</button>
+</div>

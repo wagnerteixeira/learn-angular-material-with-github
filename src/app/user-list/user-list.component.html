@@ -1,0 +1,8 @@
+<mat-nav-list role="list">
+  <mat-list-item *ngFor="let user of users$">
+      <p matLine>{{ user.login }}</p>
+      <button  mat-mini-fab (click)="showInfo(user)">
+          <mat-icon>info</mat-icon>
+       </button>
+  </mat-list-item>
+</mat-nav-list>
